@@ -84,5 +84,13 @@ if __name__ == "__main__":
     df_csv = collect_from_csv()
     df_sql = collect_from_sql()
     df_big = collect_from_bigdata()
+    # Sauvegarde des données collectées
+df_api.to_csv("data/processed/api_data.csv", index=False)
+df_csv.to_csv("data/processed/csv_data.csv", index=False)
+df_sql.to_csv("data/processed/sql_data.csv", index=False)
+df_big.to_csv("data/processed/bigdata.csv", index=False)
 
-    print("\n🎉 Collecte terminée.")
+print("💾 Données sauvegardées dans data/processed/")
+
+
+print("\n🎉 Collecte terminée.")
